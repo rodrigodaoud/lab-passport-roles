@@ -1,0 +1,37 @@
+<h1>Create a new user </h1>
+
+<form id="form" action="/create" method="POST">
+
+    <div class="username">
+        <label for="username">Username</label>
+        <input id="username" type="text" name="username">
+    </div>
+
+    <div class="password">
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password">
+    </div>
+
+    <div class="firstname">
+        <label for="firstname">First Name</label>
+        <input id="firstname" type="text" name="firstName">
+    </div>
+
+    <div class="lastname">
+        <label for="lastname">Last Name</label>
+        <input id="lastname" type="text" name="lastName">
+    </div>
+
+    <div class="role">
+        <label for="role">Role</label>
+        <input id="role" type="text" name="role">
+    </div>
+
+    <% if (typeof(errorMessage) != "undefined") { %>
+        <div class="error-message"><%= errorMessage %></div>
+    <% } %>
+
+    <div class="btn-create">
+        <button>Create User</button>
+    </div>
+</form>
